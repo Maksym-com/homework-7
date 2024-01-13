@@ -16,5 +16,4 @@ class Goods(Base):
     customers: Mapped[int]
     group_id: Mapped[int] = mapped_column(ForeignKey('groups.id'))
     group: Mapped[str] = relationship('Group', back_populates='good')
-    __allow_unmapped__ = True
-    overlaps = "name"
+
