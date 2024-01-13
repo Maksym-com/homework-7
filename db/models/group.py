@@ -10,5 +10,3 @@ class Group(Base):
     name: Mapped[str]
 
     good: Mapped[str] = relationship('Goods', back_populates='group')
-    __allow_unmapped__ = True
-    overlaps = "name"
